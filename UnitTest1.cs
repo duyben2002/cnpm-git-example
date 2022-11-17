@@ -1,51 +1,64 @@
-using StudentServiceLib;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UnitTestConsole;
 
-namespace MyTest
+namespace TestKey
 {
     [TestClass]
     public class UnitTest1
     {
+        //Test class 
         [TestMethod]
-        public void Score8_Should_ReturnA()
+        public void TestMethod1()
         {
-            Student s = new Student();
-            s.Id = 1;
-            s.Name = "Toan";
-            s.Age = 30;
-            s.Score = 8;
-            char letter = s.getLetterScore();
-            Assert.AreEqual('A', letter);
+            Researcher researcher = new Researcher();
+            researcher.Factor = 4;
+            researcher.NumOfPaper = 2;
+            researcher.PaperRank = 3;
+
+            Assert.AreEqual(13.2324, researcher.GetSalary());
         }
-        public void Score8_Should_ReturnB()
+        [TestMethod]
+        public void TestMethod2()
         {
-            Student s = new Student();
-            s.Id = 2;
-            s.Name = "Ben";
-            s.Age = 21;
-            s.Score = 7;
-            char letter = s.getLetterScore();
-            Assert.AreEqual('B', letter);
+            Researcher researcher = new Researcher();
+            researcher.Factor = 2;
+            researcher.NumOfPaper = 2;
+            researcher.PaperRank = 3;
+            Assert.AreEqual(15.2324, researcher.GetSalary());
         }
-        public void Score8_Should_ReturnC()
+        [TestMethod]
+        public void TestMethod3()
         {
-            Student s = new Student();
-            s.Id = 3;
-            s.Name = "Hoang Anh";
-            s.Age = 28;
-            s.Score = 6;
-            char letter = s.getLetterScore();
-            Assert.AreEqual('C', letter);
+            Researcher researcher = new Researcher();
+            researcher.Factor = 4;
+            researcher.NumOfPaper = 5;
+            researcher.PaperRank = 2;
+            Assert.AreEqual(14.2312, researcher.GetSalary());
         }
-        public void Score8_Should_ReturnD()
+        [TestMethod]
+        public void TestMethod4()
         {
-            Student s = new Student();
-            s.Id = 4;
-            s.Name = "Ben";
-            s.Age = 26;
-            s.Score = 7;
-            char letter = s.getLetterScore();
-            Assert.AreEqual('D', letter);
+            Researcher researcher = new Researcher();
+            researcher.Factor = 4;
+            researcher.NumOfPaper = 5;
+            researcher.PaperRank = 2;
+            Assert.AreEqual(15.012, researcher.GetSalary());
         }
+        [TestMethod]
+        public void TestMethod5()
+        {
+            Researcher researcher = new Researcher();
+            researcher.Factor = 4;
+            researcher.NumOfPaper = 5;
+            researcher.PaperRank = 1;
+            Assert.AreEqual(14321, researcher.GetSalary());
+        }
+
+
+
+
+
+
+
+
     }
 }
